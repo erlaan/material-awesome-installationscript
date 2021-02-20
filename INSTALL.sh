@@ -13,8 +13,8 @@ TODO:
 comment
 
 if [ $1 == "Fedora" ]; then
-    sudo dnf install -y awesome git google-roboto-fonts rofi compton xclip qt5-qtstyleplugins materia-gtk-theme lxappearance papirus-icon-theme spectacle imagemagick awk util-linux
-    sudo dnf groupinstall "Development Tools"
+    sudo dnf install -y awesome git google-roboto-fonts rofi compton xclip qt5-qtstyleplugins materia-gtk-theme lxappearance papirus-icon-theme spectacle ImageMagick gawk util-linux
+    sudo dnf groupinstall -y "Development Tools"
     git clone https://github.com/erlaan/material-awesome.git ~/.config/awesome
     mkdir ~/git
     cd ~/git
@@ -29,7 +29,7 @@ if [ $1 == "Fedora" ]; then
     sudo bash -c 'echo "QT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment'
     echo "Should be done now!"
     exit
-if [ $1 == "Opensuse"]; then
+elif [ $1 == "Opensuse"]; then
     sudo zypper install awesome rofi compton git-core autoconf gcc make pam-devel pkg-config automake xcb-util-image-devel xcb-util-xrm-devel libev-devel libxkbcommon-devel libxkbcommon-x11-devel cairo-devel libjpeg62-devel libqt5-qtstyleplugins materia-gtk-theme papirus-icon-theme lxappearance
     mkdir ~/git
     cd ~/git
